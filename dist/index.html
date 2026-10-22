@@ -32,6 +32,9 @@
     html {
       scroll-behavior: smooth;
       scroll-padding-top: 78px;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
     }
 
     body {
@@ -984,8 +987,8 @@
     @media (max-width: 760px) {
       html { scroll-padding-top: 66px; }
       .shell {
-        width: calc(100vw - 32px);
-        max-width: calc(100vw - 32px);
+        width: calc(100% - 32px);
+        max-width: calc(100% - 32px);
       }
       .site-header { backdrop-filter: none; }
       .nav {
@@ -1006,9 +1009,12 @@
         left: 0;
         display: grid;
         gap: 0;
-        padding: 4px 16px 14px;
+        max-height: calc(100dvh - 64px);
+        overflow-y: auto;
+        padding: 4px 16px calc(14px + env(safe-area-inset-bottom));
         border-bottom: 3px solid var(--ink);
         background: var(--paper);
+        box-shadow: 0 10px 0 rgba(16, 16, 16, 0.08);
         opacity: 0;
         pointer-events: none;
         transform: translateY(-12px);
@@ -1022,17 +1028,21 @@
       }
 
       .nav-links a {
-        padding: 15px 4px 12px;
+        display: flex;
+        min-height: 48px;
+        align-items: center;
+        padding: 10px 4px;
         border-bottom: 1px solid var(--ink);
       }
 
       .hero {
         min-height: auto;
         grid-template-columns: 1fr;
-        padding-block: 58px 70px;
+        gap: 10px;
+        padding-block: 48px 60px;
       }
 
-      .hero h1 { font-size: 4.8rem; }
+      .hero h1 { font-size: clamp(3.65rem, 13vw, 4.8rem); }
       .hero,
       .hero-copy,
       .hero-intro {
@@ -1042,20 +1052,26 @@
       }
 
       .hero-intro {
-        overflow-wrap: anywhere;
-        word-break: break-all;
+        overflow-wrap: break-word;
+        word-break: normal;
+        text-wrap: pretty;
       }
 
       .hero-figure {
-        min-height: 440px;
-        margin-top: 18px;
+        width: 100%;
+        min-height: clamp(350px, 104vw, 440px);
+        margin-top: 12px;
+        overflow: clip;
       }
 
-      .portrait { width: min(620px, 112vw); }
-      .portrait-loop { width: 72vw; height: 390px; }
+      .portrait { width: min(620px, calc(100vw - 16px)); }
+      .portrait-loop {
+        width: min(72vw, 420px);
+        height: clamp(300px, 60vw, 390px);
+      }
       .portrait-note { top: 13%; right: 4%; }
       .burst { bottom: 7%; right: 5%; }
-      .section { padding-block: 82px; }
+      .section { padding-block: clamp(64px, 16vw, 82px); }
 
       .section-head {
         grid-template-columns: 1fr;
@@ -1063,7 +1079,7 @@
         margin-bottom: 45px;
       }
 
-      .section-title { font-size: 4.1rem; }
+      .section-title { font-size: clamp(3.25rem, 12vw, 4.1rem); }
 
       .about-grid,
       .notes-layout,
@@ -1094,7 +1110,7 @@
         width: min(100%, 360px);
       }
 
-      .contact-title { font-size: 4.8rem; }
+      .contact-title { font-size: clamp(3.65rem, 13vw, 4.8rem); }
       .contact-doodle { min-height: 200px; }
       .social-links { margin-top: 45px; }
     }
@@ -1102,7 +1118,10 @@
     @media (max-width: 450px) {
       body { font-size: 16px; }
       .eyebrow { font-size: 1rem; }
-      .hero h1 { font-size: 3.65rem; }
+      .hero {
+        padding-block: 42px 52px;
+      }
+      .hero h1 { font-size: clamp(3.35rem, 18vw, 3.8rem); }
 
       .hero h1 span,
       .hero h1 strong {
@@ -1113,14 +1132,17 @@
       .hero-actions {
         align-items: stretch;
         flex-direction: column;
+        gap: 14px;
       }
 
       .rough-button { width: 100%; }
-      .hero-figure { min-height: 350px; }
+      .hero-figure { min-height: 320px; }
       .portrait-loop { height: 310px; }
       .portrait-note { top: 8%; font-size: 0.98rem; }
       .burst { width: 68px; height: 68px; }
-      .section-title { font-size: 3.35rem; }
+      .section { padding-block: 64px; }
+      .section-head { margin-bottom: 34px; }
+      .section-title { font-size: clamp(3rem, 15vw, 3.5rem); }
 
       .fact {
         grid-template-columns: 1fr;
@@ -1128,10 +1150,11 @@
       }
 
       .project {
-        grid-template-columns: 38px minmax(0, 1fr) 34px;
+        grid-template-columns: 34px minmax(0, 1fr) 30px;
+        gap: 10px;
       }
 
-      .project h3 { font-size: 1.6rem; }
+      .project h3 { font-size: clamp(1.45rem, 7vw, 1.7rem); }
       .project p { font-size: 0.92rem; }
 
       .note {
@@ -1140,14 +1163,20 @@
       }
 
       .note time { grid-column: 1 / -1; }
-      .contact-title { font-size: 3.65rem; }
+      .contact-title { font-size: clamp(3.1rem, 15vw, 3.65rem); }
 
       .email-link {
         grid-template-columns: 28px minmax(0, 1fr) 20px;
         gap: 10px;
+        width: 100%;
         min-height: 64px;
         padding: 12px;
-        font-size: 1.45rem;
+        font-size: clamp(1.2rem, 6vw, 1.45rem);
+      }
+
+      .social-links {
+        gap: 16px 20px;
+        font-size: 1rem;
       }
 
       .footer-inner {
