@@ -28,7 +28,7 @@ for page in pages:
 <link rel="stylesheet" href="{base}assets/site.css"><script src="{base}assets/site.js" defer></script>
 </head><body>
 <a class="skip-link" href="#main">跳到主要内容</a>
-<header class="site-header"><div class="shell nav"><a class="logo" href="{base}" aria-label="Bao Qinghan 首页"><span class="logo-scribble" aria-hidden="true">B</span><span>BAO QINGHAN</span></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航"><span></span><span></span><span></span></button><nav class="nav-links" id="site-nav" aria-label="主要导航">{nav}<a href="{base}#contact">联系我 ↗</a></nav></div></header>
+<header class="site-header"><div class="shell nav"><a class="logo" href="{base}" aria-label="奇思妙想包 · 首页"><img class="brand-logo" src="{base}assets/qisimiaoxiangbao-logo.png" alt="奇思妙想包" width="1942" height="809" fetchpriority="high"></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航"><span></span><span></span><span></span></button><nav class="nav-links" id="site-nav" aria-label="主要导航">{nav}<a href="{base}#contact">联系我 ↗</a></nav></div></header>
 <main id="main">{body}</main>
 <footer class="footer"><div class="shell footer-inner"><span>© <span id="year">2026</span> Bao Qinghan</span><div class="footer-links"><a href="mailto:rynejason1@gmail.com">邮件 ↗</a><a href="https://github.com/Boooooobbb" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="{base}about/">关于我</a></div><span class="footer-hand">made with a wobbly line</span></div></footer>
 <noscript><style>.menu-button{{display:none}}@media(max-width:760px){{.nav{{flex-wrap:wrap;padding-block:14px}}.nav-links{{position:static;display:flex;flex-wrap:wrap;opacity:1;transform:none;pointer-events:auto;box-shadow:none;border:0;padding:0;gap:12px}}}}</style></noscript>
@@ -40,7 +40,7 @@ urls=[ORIGIN+(p['path'][:-10] if p['path'].endswith('index.html') else p['path']
 dist=ROOT/'dist';dist.mkdir(exist_ok=True)
 for p in pages:
     target=dist/p['path'];target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/p['path'],target)
-for name in ['bao-marker-portrait-v2.png','contact-icons-LICENSE.txt','site.css','site.js','favicon.svg']:
+for name in ['bao-marker-portrait-v2.png','contact-icons-LICENSE.txt','site.css','site.js','favicon.svg','qisimiaoxiangbao-logo.png']:
     (dist/'assets').mkdir(exist_ok=True);shutil.copy2(ROOT/'assets'/name,dist/'assets'/name)
 shutil.copy2(ROOT/'sitemap.xml',dist/'sitemap.xml')
 print(f'Built {len(pages)} pages; root and dist synchronized.')
