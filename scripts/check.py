@@ -34,6 +34,6 @@ for p,page in parsed.items():
   if u.fragment and target.suffix=='.html':
    q=parsed.get(target) or Page(target.read_text())
    assert unquote(u.fragment) in q.ids,f'{p}: missing anchor {ref}'
-for name in ['site.css','site.js','favicon.svg','bao-marker-portrait-v2.png','qisimiaoxiangbao-logo.png']:
+for name in ['site.css','site.js','favicon.svg','backpack-icon-v2.svg','bao-marker-portrait-v2.png','qisimiaoxiangbao-logo.png']:
  assert (ROOT/'assets'/name).read_bytes()==(ROOT/'dist/assets'/name).read_bytes()
 print(f'PASS: {len(paths)} pages, local links/anchors, unique IDs, titles, headings, and dist parity.')

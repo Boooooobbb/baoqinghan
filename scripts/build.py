@@ -21,7 +21,7 @@ for page in pages:
 <title>{title}</title><meta name="description" content="{desc}"><meta name="theme-color" content="#fbfbf8">
 <link rel="canonical" href="{canonical}">
 <meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:type" content="{'article' if page['active']=='notes' and depth==2 else 'website'}"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{ORIGIN}assets/bao-marker-portrait-v2.png"><meta property="og:locale" content="zh_CN">
-<link rel="icon" type="image/svg+xml" href="{base}assets/favicon.svg">
+<link rel="icon" type="image/svg+xml" sizes="any" href="{base}assets/backpack-icon-v2.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&amp;family=Patrick+Hand&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
@@ -40,7 +40,7 @@ urls=[ORIGIN+(p['path'][:-10] if p['path'].endswith('index.html') else p['path']
 dist=ROOT/'dist';dist.mkdir(exist_ok=True)
 for p in pages:
     target=dist/p['path'];target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/p['path'],target)
-for name in ['bao-marker-portrait-v2.png','contact-icons-LICENSE.txt','site.css','site.js','favicon.svg','qisimiaoxiangbao-logo.png']:
+for name in ['bao-marker-portrait-v2.png','contact-icons-LICENSE.txt','site.css','site.js','favicon.svg','backpack-icon-v2.svg','qisimiaoxiangbao-logo.png']:
     (dist/'assets').mkdir(exist_ok=True);shutil.copy2(ROOT/'assets'/name,dist/'assets'/name)
 shutil.copy2(ROOT/'sitemap.xml',dist/'sitemap.xml')
 print(f'Built {len(pages)} pages; root and dist synchronized.')
