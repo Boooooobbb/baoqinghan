@@ -1,0 +1,51 @@
+[
+  {
+    "path": "index.html",
+    "title": "Bao Qinghan｜设计、代码与日常灵感",
+    "description": "Bao Qinghan 的个人网站：作品、项目记录与日常灵感。",
+    "active": "home",
+    "source": "index.html"
+  },
+  {
+    "path": "about/index.html",
+    "title": "关于我｜Bao Qinghan",
+    "description": "认识 Bao：关注界面、设计与代码，也喜欢散步、拍照和随手画画。",
+    "active": "about",
+    "source": "about__index.html"
+  },
+  {
+    "path": "projects/index.html",
+    "title": "作品｜Bao Qinghan",
+    "description": "Bao 的作品与创作实验，从个人网站开始记录设计和开发过程。",
+    "active": "projects",
+    "source": "projects__index.html"
+  },
+  {
+    "path": "notes/index.html",
+    "title": "记录｜Bao Qinghan",
+    "description": "关于做东西、想事情和日常观察的记录。",
+    "active": "notes",
+    "source": "notes__index.html"
+  },
+  {
+    "path": "projects/personal-site/index.html",
+    "title": "线上涂鸦本：个人网站｜Bao Qinghan",
+    "description": "一个手绘风格个人网站的项目记录：背景、页面结构、技术选择与下一步。",
+    "active": "projects",
+    "source": "projects__personal-site__index.html"
+  },
+  {
+    "path": "notes/building-this-site/index.html",
+    "title": "从一张首页，到一本可以慢慢写的网站｜Bao Qinghan",
+    "description": "记录个人网站从单页走向多页面的结构调整与设计取舍。",
+    "active": "notes",
+    "source": "notes__building-this-site__index.html"
+  },
+  {
+    "path": "404.html",
+    "title": "页面未找到｜Bao Qinghan",
+    "description": "这个页面暂时不在涂鸦本里，回到首页继续看看。",
+    "active": "",
+    "source": "404.html"
+  }
+]
