@@ -34,3 +34,29 @@ python3 -m http.server 8000
 发布基址配置在 `scripts/build.py` 的 `ORIGIN`；更换域名时也需更新 404 页的回首页路径。
 
 新项目、文章请使用真实内容；目前仅发布个人网站项目和其搭建记录，未公开的社交账号不显示。
+
+## 个人收藏与文章
+
+电影和游戏在 `src/collections.json` 中维护，按数组顺序展示。封面存放在 `assets/covers/`，是使用内置 ImageGen 生成的手绘演绎；完整提示词见 `assets/covers/prompts.json`。仅展示封面与名称，不包含评分或短评。
+
+文章列表当前为空。旧建站记录保留原 URL，但不出现在列表中。
+
+安装构建依赖后生成页面：
+
+```sh
+python3 -m pip install -r requirements.txt
+python3 scripts/build.py
+python3 scripts/check.py
+```
+
+新增文章：在 `content/articles/` 新建 `my-first-post.md`，文件名使用英文小写字母、数字和连字符。文件顶部是 JSON 元数据，空行后是 Markdown 正文，例如：
+
+```markdown
+{"title":"一篇新文章","date":"2026-11-01","summary":"文章摘要。"}
+
+## 从这里开始
+
+正文支持链接、列表、表格和代码块。标题由元数据生成，正文标题从二级开始。
+```
+
+重新构建后，文章会按日期倒序出现在 `/notes/`，详情路径是 `/notes/my-first-post/`，并自动加入 sitemap。元数据错误、重复路径或空正文会阻止构建。Markdown 是仓库作者维护的可信内容，不接受访客提交。移除已发布文章时需一并删除其根目录和 dist 中的生成页面。

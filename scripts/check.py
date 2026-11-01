@@ -17,7 +17,7 @@ class Page(HTMLParser):
   if tag=='h1':self.h1+=1
   for k in ('href','src'):
    if k in a:self.refs.append(a[k])
-paths=[ROOT/p['path'] for p in json.loads((ROOT/'src/pages.json').read_text())]
+paths=[ROOT/p for p in json.loads((ROOT/'scripts/generated-pages.json').read_text())]
 parsed={p:Page(p.read_text()) for p in paths}
 for p,page in parsed.items():
  assert page.titles==1 and page.h1==1, str(p)

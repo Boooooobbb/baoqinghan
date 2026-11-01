@@ -3,17 +3,19 @@
 from pathlib import Path
 from html import escape
 import json, shutil
+from content import prepare_content
 ROOT=Path(__file__).resolve().parents[1]
 ORIGIN='https://boooooobbb.github.io/baoqinghan/'
 pages=json.loads((ROOT/'src/pages.json').read_text())
-nav_items=[('home','','首页'),('about','about/','关于'),('projects','projects/','作品'),('notes','notes/','记录')]
+pages, bodies = prepare_content(ROOT, pages)
+nav_items=[('home','','首页'),('about','about/','关于'),('projects','projects/','作品'),('movies','movies/','电影'),('games','games/','游戏'),('notes','notes/','文章')]
 for page in pages:
     path=page['path']; depth=len(Path(path).parts)-1
     base='../'*depth if depth else './'
     if path=='404.html': base='/baoqinghan/'
     nav=''.join(f'<a href="{base}{url}"'+(' aria-current="page"' if key==page['active'] else '')+f'>{label}</a>' for key,url,label in nav_items)
     canonical=ORIGIN+(path[:-10] if path.endswith('index.html') else path)
-    body=(ROOT/'src/pages'/page['source']).read_text().replace('{{root}}',base)
+    body=(bodies[page['path']] if page['path'] in bodies else (ROOT/'src/pages'/page['source']).read_text()).replace('{{root}}',base)
     title=escape(page['title']); desc=escape(page['description'],quote=True)
     html=f'''<!DOCTYPE html>
 <html lang="zh-CN"><head>
@@ -42,5 +44,8 @@ for p in pages:
     target=dist/p['path'];target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/p['path'],target)
 for name in ['bao-marker-portrait-v2.png','contact-icons-LICENSE.txt','site.css','site.js','favicon.svg','backpack-icon-v2.svg','qisimiaoxiangbao-logo.png']:
     (dist/'assets').mkdir(exist_ok=True);shutil.copy2(ROOT/'assets'/name,dist/'assets'/name)
+(dist/'assets/covers').mkdir(exist_ok=True)
+for cover in (ROOT/'assets/covers').glob('*.jpg'): shutil.copy2(cover,dist/'assets/covers'/cover.name)
 shutil.copy2(ROOT/'sitemap.xml',dist/'sitemap.xml')
+(ROOT/'scripts/generated-pages.json').write_text(json.dumps([p['path'] for p in pages]))
 print(f'Built {len(pages)} pages; root and dist synchronized.')

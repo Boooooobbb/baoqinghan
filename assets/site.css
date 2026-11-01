@@ -1249,3 +1249,33 @@
  .prose { font-size:16px; }
 }
 @media(prefers-reduced-motion:reduce) { .project-art img { transition:none; } }
+
+/* Personal collections: inked covers, quiet list typography. */
+.nav-links { gap:20px; }
+.nav-links a { white-space:nowrap; }
+.cover-list { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:52px 34px; }
+.cover-item figure { margin:0; }
+.cover-item img { width:100%; height:auto; aspect-ratio:2/3; object-fit:cover; border:2px solid var(--ink); border-radius:3px 5px 2px 4px; box-shadow:5px 6px 0 var(--ink); background:var(--paper-deep); }
+.cover-item:nth-child(3n+2) img { border-radius:7px 2px 5px 3px; }
+.cover-item figcaption { display:flex; align-items:baseline; gap:14px; padding:22px 2px 0; }
+.cover-number { font:700 1.15rem var(--latin-font); color:var(--soft-ink); }
+.cover-item h2 { font-family:var(--body-font); font-size:1.3rem; line-height:1.6; margin:0; }
+.cover-credit { margin:56px 0 72px; color:var(--soft-ink); font-size:.85rem; border-top:1px dashed var(--soft-ink); padding-top:18px; }
+.collection-doorways { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
+.collection-door { display:grid; grid-template-columns:130px 1fr; gap:24px; align-items:center; border:2px solid var(--ink); padding:24px; box-shadow:5px 5px 0 var(--ink); }
+.collection-door img { width:130px; height:190px; object-fit:cover; border:1px solid var(--ink); transform:rotate(-3deg); }
+.collection-door:nth-child(2) img { transform:rotate(3deg); }
+.collection-door h3 { font-size:1.45rem; line-height:1.5; }
+.collection-door p { margin:0; color:var(--soft-ink); }
+.collection-door .eyebrow { font-size:.95rem; }
+.collection-door:hover { background:var(--highlighter); }
+.articles-list { min-height:360px; padding-bottom:80px; }
+.article-empty { padding:50px 28px; border-block:2px solid var(--ink); }
+.article-empty>span { font-size:3.5rem; color:var(--coral); }
+.article-empty h2 { font-size:1.7rem; }
+.article-empty p { color:var(--soft-ink); margin:0; }
+.article-body { margin:0 auto; padding-bottom:80px; }
+@media(min-width:761px) and (max-width:1050px) { .nav { gap:14px; } .nav-links { gap:12px; } .logo { width:190px; } .brand-logo { width:256px; } }
+@media(max-width:980px) { .collection-doorways { grid-template-columns:1fr; } }
+@media(max-width:760px) { .cover-list { grid-template-columns:repeat(2,minmax(0,1fr)); gap:30px 22px; } .cover-item h2 { font-size:1.05rem; } .cover-item figcaption { gap:8px; padding-top:16px; } .cover-credit { margin-block:36px 50px; } }
+@media(max-width:400px) { .collection-door { grid-template-columns:85px 1fr; gap:18px; padding:18px; } .collection-door img { width:85px; height:128px; } .collection-door h3 { font-size:1.2rem; } .collection-door .eyebrow { font-size:.8rem; } .cover-list { gap:26px 16px; } }
