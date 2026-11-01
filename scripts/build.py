@@ -2,12 +2,16 @@
 """Build static pages for GitHub Pages and mirror deployable files into dist/."""
 from pathlib import Path
 from html import escape
-import json, shutil
+import hashlib, json, shutil
 from content import prepare_content
 ROOT=Path(__file__).resolve().parents[1]
 ORIGIN='https://boooooobbb.github.io/baoqinghan/'
 pages=json.loads((ROOT/'src/pages.json').read_text())
 pages, bodies = prepare_content(ROOT, pages)
+asset_versions={
+    name: hashlib.sha256((ROOT/'assets'/name).read_bytes()).hexdigest()[:8]
+    for name in ('site.css','site.js')
+}
 nav_items=[('home','','首页'),('about','about/','关于'),('projects','projects/','作品'),('movies','movies/','电影'),('games','games/','游戏'),('notes','notes/','文章')]
 for page in pages:
     path=page['path']; depth=len(Path(path).parts)-1
@@ -27,7 +31,7 @@ for page in pages:
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&amp;family=Patrick+Hand&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
-<link rel="stylesheet" href="{base}assets/site.css"><script src="{base}assets/site.js" defer></script>
+<link rel="stylesheet" href="{base}assets/site.css?v={asset_versions['site.css']}"><script src="{base}assets/site.js?v={asset_versions['site.js']}" defer></script>
 </head><body>
 <a class="skip-link" href="#main">跳到主要内容</a>
 <header class="site-header"><div class="shell nav"><a class="logo" href="{base}" aria-label="奇思妙想包 · 首页"><img class="brand-logo" src="{base}assets/qisimiaoxiangbao-logo.png" alt="奇思妙想包" width="1942" height="809" fetchpriority="high"></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航"><span></span><span></span><span></span></button><nav class="nav-links" id="site-nav" aria-label="主要导航">{nav}<a href="{base}#contact">联系我 ↗</a></nav></div></header>
