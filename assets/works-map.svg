@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 350" role="img" aria-labelledby="title">
+  <title id="title">画着项目、绘画和摄影线索的手绘地图</title>
+  <g stroke="#101010" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M42 62 143 46l100 22 153-29-8 229-139 37-105-24-107 29Z" fill="#fffdf7" stroke-width="7"/>
+    <path d="m143 46 1 235m99-213 6 237" fill="none" stroke-width="5"/>
+    <path d="M64 94c-4 37-7 83-3 122m315-150c4 47 2 88-1 119" fill="none" stroke-width="3" opacity=".5"/>
+    <path d="M83 251c30-26 47-16 68-42 25-31 56-17 70 0 22 26 47 18 67-4 25-27 37-19 67-27" fill="none" stroke="#1767d9" stroke-width="5" stroke-dasharray="4 12"/>
+    <path d="m87 113-26 28 26 28m42-56 26 28-26 28m-27 5 16-70" fill="none" stroke-width="8"/>
+    <path d="M178 112c3-25 17-38 35-39 21-1 38 16 35 39-2 18-13 30-30 31-9 1-7 13-17 13-7 0-9-9-4-14-15-6-22-16-19-30Z" fill="#ffe1d7" stroke-width="6"/>
+    <circle cx="197" cy="97" r="3.5" fill="#101010" stroke="none"/><circle cx="221" cy="89" r="3" fill="#101010" stroke="none"/><circle cx="231" cy="111" r="3.5" fill="#101010" stroke="none"/>
+    <path d="m206 165 35-51 7 6-35 51-13 8Z" fill="#ff6b58" stroke-width="4"/>
+    <path d="m302 104 18-18h37l10 17 12 2 1 51-87 3-1-54Z" fill="#fffdf7" stroke-width="6"/>
+    <circle cx="335" cy="130" r="16" fill="#dfeaff" stroke-width="5"/>
+    <path d="M302 101h20m36 4 13 1m-50-20 3-11h25l7 11" fill="none" stroke-width="5"/>
+    <path d="m91 43 5-19 7 17 18 6-17 8-6 18-6-19-18-6Z" fill="#ff6b58" stroke-width="4"/>
+    <path d="m354 243 5-14 5 14 14 5-14 6-5 14-5-14-14-6Z" fill="#ff6b58" stroke-width="3.5"/>
+    <path d="m292 44 10-8m6 18 12-1M54 281l-10 8m44-1-1 12" fill="none" stroke-width="4"/>
+  </g>
+</svg>
