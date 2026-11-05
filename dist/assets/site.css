@@ -1253,26 +1253,50 @@
 /* Two paths through the work: things made and things drawn. */
 .projects-page { padding-bottom:96px; }
 .projects-page .page-head { padding-bottom:42px; }
-.creative-lanes { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; }
+.creative-lanes { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
 .creative-lane { min-width:0; display:flex; flex-direction:column; border:3px solid var(--ink); background:var(--paper); box-shadow:7px 7px 0 var(--ink); }
-.lane-art { display:grid; place-items:center; min-height:245px; border-bottom:3px solid var(--ink); overflow:hidden; }
+.lane-art { display:grid; place-items:center; min-height:215px; border-bottom:3px solid var(--ink); overflow:hidden; }
 .lane-art-build { background:var(--highlighter); }
 .lane-art-draw { background:#e9e9e2; }
+.lane-art-photo { background:#dfe5ff; }
 .lane-art svg { width:min(75%,260px); height:auto; color:var(--ink); transform:rotate(-3deg); }
 .lane-art-draw svg { transform:rotate(3deg); }
-.lane-copy { flex:1; display:flex; flex-direction:column; padding:30px 32px 26px; }
+.lane-art-photo svg { transform:rotate(-2deg); }
+.lane-copy { flex:1; display:flex; flex-direction:column; padding:25px; }
 .lane-index { font:700 1rem var(--latin-font); }
-.lane-copy h2 { font:700 clamp(2rem,3.3vw,2.7rem)/1.25 var(--marker-font); margin:14px 0; }
+.lane-copy h2 { font:700 clamp(1.7rem,2.5vw,2.25rem)/1.25 var(--marker-font); margin:14px 0; }
 .lane-copy h2 span { color:var(--coral); font-size:.7em; }
 .lane-copy > p:not(.lane-footnote) { color:var(--soft-ink); line-height:1.75; margin:0 0 24px; }
 .lane-entry,.lane-empty { min-height:65px; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 18px; border:2px solid var(--ink); font-family:var(--marker-font); font-size:1.2rem; }
-.lane-entry { background:var(--paper-deep); transition:transform .18s,box-shadow .18s; }
+.lane-entry { margin-top:auto; background:var(--paper-deep); transition:transform .18s,box-shadow .18s; }
 .lane-entry:hover,.lane-entry:focus-visible { transform:translate(-3px,-3px); box-shadow:4px 4px 0 var(--ink); }
 .lane-entry:focus-visible { outline:3px solid var(--coral); outline-offset:4px; }
 .lane-empty { border-style:dashed; color:var(--soft-ink); font-size:1rem; line-height:1.5; }
 .lane-empty span { color:var(--coral); font-size:1.5rem; }
 .lane-footnote { margin:22px 0 0; color:var(--soft-ink); font-size:.95rem; }
-@media(max-width:760px) { .projects-page { padding-bottom:72px; } .creative-lanes { grid-template-columns:1fr; gap:30px; } .lane-art { min-height:210px; } .lane-copy { padding:24px; } }
+.collection-page { padding:45px 0 100px; }
+.collection-page .page-head { padding:45px 0 48px; }
+.collection-page .page-head h1 { font-family:var(--marker-font); }
+.work-grid,.empty-gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+.work-tile { min-width:0; border:3px solid var(--ink); background:var(--paper); box-shadow:6px 6px 0 var(--ink); }
+.work-tile-art { height:225px; display:grid; place-items:center; overflow:hidden; border-bottom:3px solid var(--ink); background:var(--highlighter); }
+.work-tile-art img { width:85%; height:90%; object-fit:contain; }
+.work-tile-copy { padding:24px; }
+.work-tile-copy h2 { font:700 1.65rem/1.35 var(--marker-font); margin:12px 0; }
+.work-tile-copy p { color:var(--soft-ink); margin:0; line-height:1.7; }
+.work-tile-live:hover,.work-tile-live:focus-visible { transform:translate(-3px,-3px); box-shadow:9px 9px 0 var(--ink); }
+.work-tile-live:focus-visible { outline:3px solid var(--coral); outline-offset:5px; }
+.work-tile-soon .work-tile-art { background:var(--paper-deep); border-bottom-style:dashed; }
+.work-tile-soon .work-tile-art span { font:700 4.5rem var(--latin-font); color:var(--soft-ink); transform:rotate(-8deg); }
+.empty-frame { aspect-ratio:4/3; display:flex; flex-direction:column; justify-content:space-between; padding:24px; border:3px dashed var(--ink); background:var(--paper-deep); }
+.empty-frame:nth-child(2) { transform:rotate(1deg); }
+.empty-frame:nth-child(3) { transform:rotate(-1deg); }
+.empty-frame span { font:700 1.1rem var(--latin-font); color:var(--coral); }
+.empty-frame strong { font:700 1.35rem/1.4 var(--marker-font); }
+.photo-gallery .empty-frame { aspect-ratio:3/2; background:#e8ebf4; }
+.gallery-note { margin:34px 0 0; color:var(--soft-ink); }
+@media(max-width:1000px) { .creative-lanes { gap:18px; } .lane-copy { padding:21px; } .lane-art { min-height:185px; } }
+@media(max-width:760px) { .projects-page { padding-bottom:72px; } .creative-lanes,.work-grid,.empty-gallery { grid-template-columns:1fr; gap:30px; } .lane-art { min-height:210px; } .lane-copy { padding:24px; } .collection-page { padding:28px 0 70px; } .collection-page .page-head { padding:30px 0 36px; } .empty-frame,.photo-gallery .empty-frame { aspect-ratio:4/2.6; } }
 
 /* Personal collections: inked covers, quiet list typography. */
 .nav-links { gap:20px; }
