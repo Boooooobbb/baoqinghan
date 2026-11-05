@@ -16,9 +16,30 @@
   {
     "path": "projects/index.html",
     "title": "作品｜Bao Qinghan",
-    "description": "包庆涵的点子工坊与灵感画室：项目实践、设计实验与艺术创作。",
+    "description": "包庆涵的点子工坊、灵感画室与光影暗房：项目、艺术创作和摄影作品。",
     "active": "projects",
     "source": "projects__index.html"
+  },
+  {
+    "path": "projects/workshop.html",
+    "title": "点子工坊｜Bao Qinghan",
+    "description": "包庆涵的项目实践与制作记录。",
+    "active": "projects",
+    "source": "projects__workshop.html"
+  },
+  {
+    "path": "projects/studio.html",
+    "title": "灵感画室｜Bao Qinghan",
+    "description": "包庆涵的艺术创作与涂鸦展示。",
+    "active": "projects",
+    "source": "projects__studio.html"
+  },
+  {
+    "path": "projects/darkroom.html",
+    "title": "光影暗房｜Bao Qinghan",
+    "description": "包庆涵的摄影作品展示。",
+    "active": "projects",
+    "source": "projects__darkroom.html"
   },
   {
     "path": "notes/index.html",
