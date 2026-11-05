@@ -8,7 +8,7 @@ def prepare_content(root,pages):
     bodies={}
     for key,items in json.loads((root/'src/collections.json').read_text()).items():
         label,english=('电影','CINEMA LIST.') if key=='movies' else ('游戏','PLAY LIST.')
-        cards=''.join(f'<li class="cover-item"><figure><img src="{{{{root}}}}assets/covers/{slug}.jpg" alt="{escape(title)}的 AI 手绘封面" width="400" height="600" loading="lazy"><figcaption><span class="cover-number">{i:02d}</span><h2>{escape(title)}</h2></figcaption></figure></li>' for i,(slug,title) in enumerate(items,1))
+        cards=''.join(f'<li class="cover-item"><figure><img src="{{{{root}}}}assets/covers/{slug}.jpg" alt="{escape(title)}的 AI 手绘封面" width="400" height="600" loading="lazy"><figcaption><span class="cover-number">{i:02d}</span><div class="cover-copy"><h2>{escape(title)}</h2><p class="cover-review">{escape(review)}</p></div></figcaption></figure></li>' for i,(slug,title,review) in enumerate(items,1))
         bodies[key+'/index.html']=f'<div class="shell"><header class="page-head"><p class="eyebrow">{label}清单 / {len(items):02d} PICKS</p><h1>{english}</h1><p class="intro">'+('把喜欢的故事，收进这一页。' if key=='movies' else '在另一个世界里，继续探索。')+f'</p></header><ol class="cover-list">{cards}</ol><p class="cover-credit">封面为 AI 手绘演绎，作品名称及相关形象归各自权利人所有。</p></div>'
     articles=[]
     for source in sorted((root/'content/articles').glob('*.md')):
