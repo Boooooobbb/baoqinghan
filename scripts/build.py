@@ -48,6 +48,8 @@ for p in pages:
     target=dist/p['path'];target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/p['path'],target)
 for name in ['bao-marker-portrait-v2.png','contact-icons-LICENSE.txt','site.css','site.js','favicon.svg','backpack-icon-v2.svg','qisimiaoxiangbao-logo.png','project-book-closed.png','works-map.svg']:
     (dist/'assets').mkdir(exist_ok=True);shutil.copy2(ROOT/'assets'/name,dist/'assets'/name)
+(dist/'assets/works').mkdir(parents=True,exist_ok=True)
+shutil.copytree(ROOT/'assets/works',dist/'assets/works',dirs_exist_ok=True)
 (dist/'assets/covers').mkdir(exist_ok=True)
 for cover in (ROOT/'assets/covers').glob('*.jpg'): shutil.copy2(cover,dist/'assets/covers'/cover.name)
 shutil.copy2(ROOT/'sitemap.xml',dist/'sitemap.xml')
