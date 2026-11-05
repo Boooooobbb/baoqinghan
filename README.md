@@ -37,7 +37,7 @@ python3 -m http.server 8000
 
 ## 个人收藏与文章
 
-电影和游戏在 `src/collections.json` 中维护，按数组顺序展示。封面存放在 `assets/covers/`，是使用内置 ImageGen 生成的手绘演绎；完整提示词见 `assets/covers/prompts.json`。仅展示封面与名称，不包含评分或短评。
+电影和游戏在 `src/collections.json` 中维护，按数组顺序展示。封面存放在 `assets/covers/`，是使用内置 ImageGen 生成的手绘演绎；完整提示词见 `assets/covers/prompts.json`。展示封面、名称和一句话简评，不包含评分。
 
 文章列表当前为空。旧建站记录保留原 URL，但不出现在列表中。
 
