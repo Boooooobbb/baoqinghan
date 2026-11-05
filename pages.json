@@ -1,0 +1,11 @@
+[
+  {"path":"index.html","title":"包庆涵｜奇思妙想包","description":"包庆涵的个人空间：作品、电影、游戏与文章。保持好奇，把想法变成现实。","active":"home","source":"index.html"},
+  {"path":"about/index.html","title":"关于我｜Bao Qinghan","description":"包庆涵的专业背景、兴趣与 AI + 硬件探索方向。","active":"about","source":"about__index.html"},
+  {"path":"projects/index.html","title":"作品｜Bao Qinghan","description":"包庆涵的点子工坊与灵感画室：项目实践、设计实验与艺术创作。","active":"projects","source":"projects__index.html"},
+  {"path":"notes/index.html","title":"文章｜包庆涵","description":"关于技术、人文与日常生活的思考。","active":"notes","source":"notes__index.html"},
+  {"path":"projects/personal-site/index.html","title":"线上涂鸦本：个人网站｜Bao Qinghan","description":"一个手绘风格个人网站的项目记录：背景、页面结构、技术选择与下一步。","active":"projects","source":"projects__personal-site__index.html"},
+  {"path":"notes/building-this-site/index.html","title":"从一张首页，到一本可以慢慢写的网站｜Bao Qinghan","description":"记录个人网站从单页走向多页面的结构调整与设计取舍。","active":"notes","source":"notes__building-this-site__index.html"},
+  {"path":"404.html","title":"页面未找到｜Bao Qinghan","description":"这个页面暂时不在涂鸦本里，回到首页继续看看。","active":"","source":"404.html"},
+  {"path":"movies/index.html","title":"电影清单｜包庆涵","description":"包庆涵的电影收藏清单。","active":"movies","source":"movies__index.html"},
+  {"path":"games/index.html","title":"游戏清单｜包庆涵","description":"包庆涵的游戏收藏清单。","active":"games","source":"games__index.html"}
+]
