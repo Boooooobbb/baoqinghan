@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="title desc">
+  <title id="title">MicroDuck 四足机器人</title>
+  <desc id="desc">荧光黄背景上的手绘桌面四足机器人，白色机身、蓝色关节和橙色小鸭嘴组成轻巧的概念形象。</desc>
+  <rect width="420" height="300" fill="#f4ff57"/>
+  <g stroke="#101010" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m84 233 254-4" fill="none" stroke-width="4"/>
+    <path d="m124 136-29 15-6 53 18 7 18-43m172-32 27 16 9 49-17 8-18-40" fill="#fffdf7" stroke-width="5"/>
+    <circle cx="98" cy="203" r="7" fill="#4b65f5" stroke-width="4"/><circle cx="324" cy="201" r="7" fill="#4b65f5" stroke-width="4"/>
+    <path d="m145 153-14 48-22 26 13 7 34-25 22-45m98-15 17 51 23 26-13 8-36-27-24-44" fill="#fffdf7" stroke-width="5"/>
+    <circle cx="133" cy="198" r="8" fill="#4b65f5" stroke-width="4"/><circle cx="292" cy="198" r="8" fill="#4b65f5" stroke-width="4"/>
+    <path d="m115 229 14 2m166-1 14-2" fill="none" stroke-width="5"/>
+    <path d="M111 112q8-17 30-20l147-5q25 2 30 22l-13 49q-6 14-24 16l-131 5q-23-1-28-19Z" fill="#fffdf7" stroke-width="6"/>
+    <path d="m153 94 17-26 77-4 18 25" fill="#fffdf7" stroke-width="5"/>
+    <path d="m185 66 1-17 45-2 2 17" fill="#4b65f5" stroke-width="4"/>
+    <path d="m146 129 115-5m-115 16 59-3" fill="none" stroke-width="3"/>
+    <circle cx="272" cy="130" r="10" fill="#4b65f5" stroke-width="4"/>
+    <path d="m311 115 32 10-30 9" fill="#ff6f5c" stroke-width="4"/>
+    <path d="m162 95-5 15m17-17-5 16m70-17 6 15" fill="none" stroke-width="3"/>
+    <circle cx="133" cy="162" r="7" fill="#4b65f5" stroke-width="4"/><circle cx="292" cy="158" r="7" fill="#4b65f5" stroke-width="4"/>
+  </g>
+  <path d="m55 95 10-6m-5 19 13-1m286 55 10-8m-4 20 13-2" fill="none" stroke="#101010" stroke-width="4" stroke-linecap="round"/>
+  <path d="m44 170 8-7 8 7-8 8Zm326-91 8-7 8 7-8 8Z" fill="#ff6f5c" stroke="#101010" stroke-width="3" stroke-linejoin="round"/>
+</svg>
