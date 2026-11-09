@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="title desc">
+  <title id="title">手绘校园卡</title>
+  <desc id="desc">荧光黄背景上一张略微倾斜的校园卡，带有蓝色抬头、头像标记和芯片。</desc>
+  <rect width="420" height="300" fill="#f4ff57"/>
+  <g transform="rotate(-7 210 150)" stroke="#101010" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="82" y="73" width="280" height="181" rx="13" fill="#101010"/>
+    <rect x="68" y="58" width="280" height="181" rx="13" fill="#fffdf7" stroke-width="6"/>
+    <path d="M81 61h254q11 0 11 11v47H70V72q0-11 11-11Z" fill="#4b65f5" stroke="none"/>
+    <path d="M70 119h276" fill="none" stroke-width="5"/>
+    <text x="91" y="101" fill="#fffdf7" stroke="none" font-family="'Patrick Hand','Microsoft YaHei',sans-serif" font-size="30" font-weight="700" letter-spacing="2">CAMPUS</text>
+    <path d="m292 84 8-12 7 12 12 7-12 7-7 12-8-12-12-7Z" fill="#f4ff57" stroke-width="3"/>
+    <rect x="91" y="139" width="78" height="76" rx="7" fill="#e9e9e4" stroke-width="4"/>
+    <circle cx="130" cy="163" r="12" fill="#fffdf7" stroke-width="3"/>
+    <path d="M108 201q1-22 22-22t22 22" fill="#fffdf7" stroke-width="3"/>
+    <path d="m191 146 118-3m-118 18 87-3m-87 19 104-3" fill="none" stroke-width="4"/>
+    <rect x="263" y="189" width="48" height="31" rx="6" fill="#f4ff57" stroke-width="4"/>
+    <path d="m279 189 1 31m15-31 1 31m-33-15 48-1" fill="none" stroke-width="2"/>
+  </g>
+  <g fill="none" stroke="#101010" stroke-width="4" stroke-linecap="round">
+    <path d="m49 94-11-8m11 22-14 1m343 97 11 7m-11-20 13-2"/>
+  </g>
+  <path d="m45 198 9-8 9 8-9 9Zm333-83 7-7 7 7-7 7Z" fill="#ff6f5c" stroke="#101010" stroke-width="3" stroke-linejoin="round"/>
+</svg>
