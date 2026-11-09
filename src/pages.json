@@ -56,6 +56,20 @@
     "source": "projects__personal-site__index.html"
   },
   {
+    "path": "projects/campus-card-box/index.html",
+    "title": "校园卡自动招领箱｜Bao Qinghan",
+    "description": "校园卡自动招领箱项目：多层旋转卡槽、机械臂与身份核验流程的概念验证记录。",
+    "active": "projects",
+    "source": "projects__campus-card-box__index.html"
+  },
+  {
+    "path": "projects/microduck/index.html",
+    "title": "MicroDuck 四足机器人｜Bao Qinghan",
+    "description": "基于 XGO-Duck 开源方案的桌面四足机器人复现与二次开发记录。",
+    "active": "projects",
+    "source": "projects__microduck__index.html"
+  },
+  {
     "path": "notes/building-this-site/index.html",
     "title": "从一张首页，到一本可以慢慢写的网站｜Bao Qinghan",
     "description": "记录个人网站从单页走向多页面的结构调整与设计取舍。",

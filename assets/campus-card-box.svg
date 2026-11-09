@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="title desc">
+  <title id="title">校园卡自动招领箱</title>
+  <desc id="desc">黑色手绘线条勾勒的招领箱，里面有旋转卡槽和机械臂，一张蓝色校园卡正从取卡口伸出。</desc>
+  <rect width="420" height="300" fill="#f4ff57"/>
+  <g stroke="#101010" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M82 51 328 42 341 246 78 254Z" fill="#fffdf7"/>
+    <path d="m98 69 175-6 7 169-182 4Z" fill="#fbfbf8"/>
+    <circle cx="187" cy="150" r="72" fill="#e8e8e2"/>
+    <circle cx="187" cy="150" r="56" fill="#fffdf7" stroke-width="3"/>
+    <circle cx="187" cy="150" r="15" fill="#f4ff57"/>
+    <path d="m186 96 1 36m-46-5 31 16m13 23-1 38m20-54 31-14" fill="none" stroke-width="3"/>
+    <path d="m166 105 37-3m-55 47 17-26m35 69 30-19m-47 22-21-23" fill="none" stroke-width="3"/>
+    <path d="m273 117 24 19-12 17-23-13m11-22-8-20 16-7 11 18" fill="#ff6f5c"/>
+    <path d="m285 151-15 18-21-9m20 9 12 21" fill="none"/>
+    <path d="m305 70 25-1 4 112-30 1Z" fill="#f4ff57"/>
+    <rect x="309" y="82" width="17" height="17" rx="2" fill="#fffdf7" stroke-width="2"/>
+    <path d="m308 205 29-1m-32 11 31-1" fill="none" stroke-width="3"/>
+    <path d="m274 230 74-3 2 13-80 3Z" fill="#101010"/>
+    <path d="m282 214 45-2 1 23-46 2Z" fill="#4b65f5"/>
+    <path d="m290 221 16-1m-16 6 25-1" fill="none" stroke="#fffdf7" stroke-width="2"/>
+    <path d="m87 267 10 8m11-8 9 8m202-13 10 8" fill="none" stroke-width="3"/>
+  </g>
+  <path d="m48 111 10-5m-6 19 12-1m295-99 7-11m5 22 12-5" fill="none" stroke="#101010" stroke-width="4" stroke-linecap="round"/>
+  <path d="m39 187 9-7 8 8-8 8Zm326 40 7-6 7 6-7 7Z" fill="#ff6f5c" stroke="#101010" stroke-width="3" stroke-linejoin="round"/>
+</svg>
