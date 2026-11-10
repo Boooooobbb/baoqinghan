@@ -64,8 +64,8 @@
   },
   {
     "path": "projects/microduck/index.html",
-    "title": "MicroDuck 四足机器人｜Bao Qinghan",
-    "description": "基于 XGO-Duck 开源方案的桌面四足机器人复现与二次开发记录。",
+    "title": "MicroDuck 双足机器人｜Bao Qinghan",
+    "description": "基于 XGO-Duck 开源方案的桌面双足机器人复现与二次开发记录。",
     "active": "projects",
     "source": "projects__microduck__index.html"
   },
